@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SG Mart</string>
+    <string name="title_activity_main">SG Mart</string>
+    <string name="package_name">com.sgmart.app</string>
+    <string name="custom_url_scheme">com.sgmart.app</string>
+</resources>

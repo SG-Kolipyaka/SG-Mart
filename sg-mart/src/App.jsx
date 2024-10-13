@@ -1,8 +1,9 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { Capacitor } from '@capacitor/core';
 import { IonReactRouter } from '@ionic/react-router';
 import AllRoutes from './Routes/AllRoutes';
-
+import SplashScreen from './components/SplashScreen';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,6 +40,7 @@ setupIonicReact();
 
 const App = () => (
   <IonApp>
+     <SplashScreen />
     <IonReactRouter>
       <IonRouterOutlet>
 <AllRoutes/>

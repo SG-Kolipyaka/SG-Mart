@@ -1,0 +1,79 @@
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Set your background color */
+    display: flex;
+    flex-direction: column; /* Stack image and title vertically */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+}
+
+.splash-image {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    animation: zoomIn 0.5s ease-in-out; /* Add zoom-in animation */
+}
+
+.splash-title {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-top: -5px; 
+    margin-right: 25px; /* Spacing between image and title */
+    color: #000; /* Initial color */
+    opacity: 0; /* Initial opacity for fade-in effect */
+    animation: fadeIn 1s forwards, changeColor 3s forwards 0.5s; /* Fade-in and color change animations */
+    font-family: 'Courier New', Courier, monospace; /* Set font family */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        color: #000; /* Initial color */
+    }
+    33% {
+        color: #FF5733; /* First color */
+    }
+    66% {
+        color: #33FF57; /* Second color */
+    }
+    100% {
+        color: #3357FF; /* Third color */
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 600px) { /* Adjust max-width as needed for your mobile design */
+    .splash-image {
+        margin-left: 30px; /* Add left margin for the image */
+    }
+
+    .splash-title {
+        margin-left: 12px; /* Add left margin for the title */
+        margin-right: 10px; 
+        margin-bottom: 100px; /* Remove right margin on mobile */
+    }
+}
+
+/* Keyframes for zoom animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
